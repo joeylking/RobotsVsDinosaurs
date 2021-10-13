@@ -1,6 +1,9 @@
 from fleet import Fleet
 from herd import Herd
 
+# Gameplay: Welcome screen. Choose side. If robots, choose weapons. If dinosaurs, choose dinos? Begin battle. You pick your attacks, opponent attacks random?
+
+
 class Battlefield:
     def __init__(self):
         self.fleet = Fleet()

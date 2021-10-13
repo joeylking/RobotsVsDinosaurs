@@ -4,7 +4,7 @@ class Robot:
     def __init__(self, name):
         self.name = name
         self.health = 100
-        self.weapon = self.choose_weapon()      # Weapon("claw", 5)
+        self.weapon = self.choose_weapon()
 
     def attack(self, dinosaur):
         pass
@@ -16,11 +16,11 @@ class Robot:
         print(f"Choose {self.name}'s weapon:")
         choice = input("1 - bat  2 - chainsaw  3 - laser  ")
         if choice == "1":
-            print(f"Excellent. {self.name} how has a {bat.name}")
+            print(f"Excellent. {self.name} now has a {bat.name}")
             return bat
         elif choice == "2":
-            print(f"Excellent. {self.name} how has a {chainsaw.name}")
+            print(f"Excellent. {self.name} now has a {chainsaw.name}")
             return chainsaw
         elif choice == "3":
-            print(f"Excellent. {self.name} how has a {laser.name}")
+            print(f"Excellent. {self.name} now has a {laser.name}")
             return laser

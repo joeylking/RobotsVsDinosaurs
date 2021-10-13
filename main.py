@@ -1,4 +1,4 @@
 from robot import Robot
+from fleet import Fleet
 
-dave = Robot("Dave")
-print(dave.weapon.name)
+fleet = Fleet()
