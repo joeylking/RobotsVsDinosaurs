@@ -7,7 +7,9 @@ class Robot:
         self.weapon = self.choose_weapon()
 
     def attack(self, dinosaur):
-        pass
+        print(f"{self.name} successfully attacked {dinosaur.name}")
+        dinosaur.health = dinosaur.health - self.weapon.attack_power
+        print(f"{dinosaur.name} has {dinosaur.health} health remaining.")
 
     def choose_weapon(self):
         bat = Weapon("really big bat", 10)
