@@ -21,7 +21,7 @@ class Fleet:
         health_values = []
         for robo in robos:
             health_values.append(robo.health)
-            print(f"{robo.name} health: {robo.health}")
+            # print(f"{robo.name} health: {robo.health}")
         total = sum(health_values)
         print(f"Total fleet health: {total}")
         self.fleet_health = total

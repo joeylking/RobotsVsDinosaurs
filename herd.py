@@ -19,7 +19,7 @@ class Herd:
         health_values = []
         for dino in dinos:
             health_values.append(dino.health)
-            print(f"{dino.name} health: {dino.health}")
+            # print(f"{dino.name} health: {dino.health}")
         total = sum(health_values)
         print(f"Total herd health: {total}")
         self.herd_health = total
