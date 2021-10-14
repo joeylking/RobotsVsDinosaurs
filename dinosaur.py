@@ -19,4 +19,5 @@ class Dinosaur:
             if robot.health > 0 :
                 print(f"{robot.name} has {robot.health} health remaining.")
             else:
+                print(50 * "-")
                 print(f"{robot.name} has been eliminated!")
