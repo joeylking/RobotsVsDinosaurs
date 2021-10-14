@@ -40,7 +40,7 @@ class Battlefield:
     def dino_turn(self):
         print("Dinosaurs' time to attack!")
         opponent = self.show_robo_opponent_options()
-        dinosaur = input(f"Which dinosaur should attack?  1 - {self.herd.dinosaurs[0].name} 2 - {self.herd.dinosaurs[1].name} 3 - {self.herd.dinosaurs[2].name}  ")
+        dinosaur = input(f"Who should lead the attack?  1 - {self.herd.dinosaurs[0].name} 2 - {self.herd.dinosaurs[1].name} 3 - {self.herd.dinosaurs[2].name}  ")
         if dinosaur == "1":
             self.herd.dinosaurs[0].attack(opponent)
         elif dinosaur == "2":
@@ -56,7 +56,7 @@ class Battlefield:
     def robo_turn(self):
         print("Robots' time to attack!")
         opponent = self.show_dino_opponent_options()
-        robot = input(f"Which robot should attack? 1 - {self.fleet.robots[0].name} 2 - {self.fleet.robots[1].name} 3 - {self.fleet.robots[2].name} ")
+        robot = input(f"Who should lead the attack? 1 - {self.fleet.robots[0].name} 2 - {self.fleet.robots[1].name} 3 - {self.fleet.robots[2].name} ")
         if robot == "1":
             self.fleet.robots[0].attack(opponent)
         elif robot == "2":
@@ -70,7 +70,7 @@ class Battlefield:
             self.dino_turn()
 
     def show_dino_opponent_options(self):
-        opponent = input(f"Which dinosaur do you want to attack? 1 - {self.herd.dinosaurs[0].name} 2 - {self.herd.dinosaurs[1].name} 3 - {self.herd.dinosaurs[2].name} ")
+        opponent = input(f"Choose the target of your attack: 1 - {self.herd.dinosaurs[0].name} 2 - {self.herd.dinosaurs[1].name} 3 - {self.herd.dinosaurs[2].name} ")
         if opponent == "1":
             return self.herd.dinosaurs[0]
         elif opponent =="2":
@@ -79,7 +79,7 @@ class Battlefield:
             return self.herd.dinosaurs[2]
 
     def show_robo_opponent_options(self):
-        opponent = input(f"Which robot do you want to attack? 1 - {self.fleet.robots[0].name} 2 - {self.fleet.robots[1].name} 3 - {self.fleet.robots[2].name} ")
+        opponent = input(f"Choose the target of your attack: 1 - {self.fleet.robots[0].name} 2 - {self.fleet.robots[1].name} 3 - {self.fleet.robots[2].name} ")
         if opponent == "1":
             return self.fleet.robots[0]
         elif opponent == "2":
