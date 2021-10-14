@@ -4,7 +4,6 @@ from dinosaur import Dinosaur
 class Herd:
     def __init__(self):
         self.dinosaurs = []
-        self.create_herd()
         self.herd_health = 300
 
     def create_herd(self):
@@ -12,6 +11,9 @@ class Herd:
         triceratops = Dinosaur("Triceratops", 20)
         raptor = Dinosaur("Raptor", 10)
         self.dinosaurs.extend([t_rex, triceratops, raptor])
+        print("The dinosaurs are:")
+        for dinosaur in self.dinosaurs:
+            print(dinosaur.name)
 
     def calc_total_health(self, dinos):
         health_values = []
