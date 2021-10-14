@@ -1,4 +1,5 @@
 from weapon import Weapon
+import random
 
 class Robot:
     def __init__(self, name):
@@ -7,8 +8,12 @@ class Robot:
         self.weapon = self.choose_weapon()
 
     def attack(self, dinosaur):
-        print(f"{self.name} successfully attacked {dinosaur.name} with a {self.weapon}")
-        dinosaur.health = dinosaur.health - self.weapon.attack_power
+        hit = random.randint(0, 1)
+        if hit == 0:
+            print(f"{self.name}'s attack against {dinosaur.name} failed!")
+        else:
+            print(f"{self.name} successfully attacked {dinosaur.name} with a {self.weapon}")
+            dinosaur.health = dinosaur.health - self.weapon.attack_power
         print(f"{dinosaur.name} has {dinosaur.health} health remaining.")
 
     def choose_weapon(self):
