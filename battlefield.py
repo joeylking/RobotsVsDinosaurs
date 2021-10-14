@@ -1,6 +1,7 @@
 from fleet import Fleet
 from herd import Herd
 import random
+import text_art
 
 class Battlefield:
     def __init__(self):
@@ -15,11 +16,7 @@ class Battlefield:
         self.battle()
 
     def display_welcome(self):
-        print(100 * "*")
-        print(100 * "*")
-        print(" ")
-        print("Robots Vs Dinosaurs!")
-        print(" ")
+        text_art.welcome_art()
         ready = input("Are you ready to play? [y/n] ")
         if ready == "y":
             print("Let's do this!")
@@ -48,7 +45,7 @@ class Battlefield:
             self.herd.dinosaurs[0].attack(opponent)
         elif dinosaur == "2":
             self.herd.dinosaurs[1].attack(opponent)
-        if dinosaur == "3":
+        elif dinosaur == "3":
             self.herd.dinosaurs[2].attack(opponent)
         self.fleet.calc_total_health(self.fleet.robots)
         if self.fleet.fleet_health == 0:
