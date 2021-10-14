@@ -9,8 +9,14 @@ class Dinosaur:
     def attack(self, robot):
         hit = random.randint(0,1)
         if hit == 0:
+            print(50 * "!")
             print(f"{self.name}'s attack against {robot.name} was unsuccessful!")
         else:
+            print(50 * "*")
             print(f"{self.name} successfully attacked {robot.name}")
+            print(50 * "*")
             robot.health = robot.health - self.attack_power
-        print(f"{robot.name} has {robot.health} health remaining.")
+            if robot.health > 0 :
+                print(f"{robot.name} has {robot.health} health remaining.")
+            else:
+                print(f"{robot.name} has been eliminated!")

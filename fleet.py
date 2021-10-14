@@ -19,9 +19,11 @@ class Fleet:
         robot3 = Robot(robot3_name)
         self.choose_weapon(robot3)
         self.robots.extend([robot1, robot2, robot3])
+        print( 50 * "-")
         print("The robots are:")
         for robot in self.robots:
             print(robot.name)
+        print( 50 * "-")
 
     def create_weapons(self):
         bat = Weapon("really big bat", 10, 1)
@@ -42,8 +44,8 @@ class Fleet:
             print(f"Choose {robot.name}'s weapon: ")
             for weapon in self.weapons:
                 print(f"{weapon.key} - {weapon.name}")
-            choice = int(input(" "))
+            choice = int(input(""))
             for weapon in self.weapons:
                 if weapon.key == choice:
                     self.weapons.remove(weapon)
-                    return weapon
+                    robot.weapon = weapon

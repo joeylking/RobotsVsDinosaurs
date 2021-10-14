@@ -11,9 +11,11 @@ class Herd:
         triceratops = Dinosaur("Triceratops", 20)
         raptor = Dinosaur("Raptor", 10)
         self.dinosaurs.extend([t_rex, triceratops, raptor])
+        print( 50 * "-")
         print("The dinosaurs are:")
         for dinosaur in self.dinosaurs:
             print(dinosaur.name)
+        print( 50 * "-")
 
     def calc_total_health(self, dinos):
         health_values = []
