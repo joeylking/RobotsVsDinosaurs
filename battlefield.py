@@ -25,7 +25,7 @@ class Battlefield:
             print("OK, bye!")
 
     def battle(self):
-        input("Enter anything to flip a coin to determine which team attacks first: ")
+        input("Press enter to flip a coin to determine which team attacks first: ")
         print("Flipping the coin......")
         print( 50 * ".")
         print( 50 * ".")
