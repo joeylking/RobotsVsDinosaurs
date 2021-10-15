@@ -20,7 +20,7 @@ class Fleet:
         self.choose_weapon(robot3)
         self.robots.extend([robot1, robot2, robot3])
         print( 50 * "-")
-        print("The robots are:")
+        print("The Robots are:")
         for robot in self.robots:
             print(robot.name)
         print( 50 * "-")

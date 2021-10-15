@@ -12,7 +12,7 @@ class Herd:
         raptor = Dinosaur("Raptor", 10)
         self.dinosaurs.extend([t_rex, triceratops, raptor])
         print( 50 * "-")
-        print("The dinosaurs are:")
+        print("The Dinosaurs are:")
         for dinosaur in self.dinosaurs:
             print(dinosaur.name)
         print( 50 * "-")
